@@ -8,7 +8,7 @@ export const fetchMany = (numberOfProducts) => {
             count: products.length,
             productDefinition
         },
-        products,
+        items: products,
     };
 
     return response;
