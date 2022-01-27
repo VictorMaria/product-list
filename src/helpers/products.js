@@ -1,5 +1,5 @@
 export const productNames = [
-    'Motion Senosr',
+    'Motion Sensor',
     'Fire Alarm',
     'Door Bell',
     '3D Printer',
