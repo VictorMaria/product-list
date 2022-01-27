@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { productNames, manufacturers } from './products';
+import { productNames, manufacturers, models } from './products';
 
 const generateId = (size) => {
     const refinedSize = parseInt(size);
@@ -13,9 +13,10 @@ const generateRandomNumber = (highestPossibleValue) => {
 export const generateRandomProducts = (numberOfProducts) => {
     const products = [];
     for (let index = 0; index < numberOfProducts; index++) {
+        const model = models[generateRandomNumber(models.length)];
         products.push(
             {
-                sku: generateId(6),
+                sku: `${model}${generateId(6)}`,
                 product_name: productNames[generateRandomNumber(productNames.length)],
                 manufacturer: manufacturers[generateRandomNumber(manufacturers.length)],
                 active: generateRandomNumber(2) === 0 ? false : true,

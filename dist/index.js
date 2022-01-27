@@ -6,12 +6,15 @@ var _express = _interopRequireDefault(require("express"));
 
 var _cors = _interopRequireDefault(require("cors"));
 
+var _modules = _interopRequireDefault(require("./src/modules"));
+
 var app = (0, _express["default"])();
 app.use((0, _cors["default"])());
 app.use(_express["default"].urlencoded({
   extended: false
 }));
 app.use(_express["default"].json());
+(0, _modules["default"])(app);
 app.get('/', function (req, res) {
   res.status(200).json({
     message: 'Our Products are great'
