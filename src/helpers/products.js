@@ -19,3 +19,8 @@ export const manufacturers = [
     'Caper Inc',
     'Deft',
 ];
+
+export const models = [
+    'new',
+    'old',
+];
