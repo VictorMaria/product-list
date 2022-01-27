@@ -2,7 +2,7 @@ import * as productService from './productService';
 
 export const fetchMany = (req, res) => {
     try {
-        const { numberOfProducts } = req.body;
+        const { numberOfProducts } = req.query;
     if (numberOfProducts && !numberOfProducts.match(/^[0-9]+$/)) {
         return res.status(400).json({ message: 'Number of products should be 1 or higher' });
     }
